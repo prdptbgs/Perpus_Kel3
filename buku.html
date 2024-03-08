@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Perpustakaan Bintang</title>
+</head>
+
+<body class="light-mode">
+
+  <header>
+    <div class="menu-icon">&#9776;</div>
+    <h1>Perpustakaan Bintang</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="beranda.html" class="active">Beranda</a></li>
+
+      <li>
+        <a href="">Rak Buku</a>
+        <ul class="dropdown">
+          <li><a href="rak buku.html#buku">Buku</a></li>
+          <li><a href="rak buku.html#e_buku">E Buku</a></li>
+          <li><a href="rak buku.html#koleksi">Koleksi</a></li>
+          <li><a href="rak buku.html#favorit">Favorit</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Kategori</a>
+        <ul class="dropdown">
+          <li><a href="fiksi.html">Fiksi</a></li>
+          <li><a href="non fiksi.html">Non Fiksi</a></li>
+          <li><a href="kategori.html">Buku Lainnya</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">Pinjam</a>
+        <ul class="dropdown">
+          <li><a href="pinjam.html">Pinjam</a></li>
+          <li><a href="riwayat.html">Riwayat</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Kegiatan</a></li>
+      <li><a href="donasi.html">Donasi</a></li>
+
+      <li>
+        <a href="#">Pengaturan</a>
+        <ul class="dropdown">
+          <li><a href="profile.html"></a>Profile</li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="container_kami">
+    <div class="library_kami">
+      <h2>Selamat Datang di Perpustakaan Bintang</h2>
+      <p>Menyediakan berbagai koleksi buku terbaru dan terbaik</p>
+    </div>
+    <div class="tambah-buku">
+      <h2>Tambah Data Buku</h2>
+      <form action="databuku.php" method="post">
+        <div class="form-group">
+          <label for="judul">Judul Buku</label>
+          <input type="text" id="judul" name="judul" placeholder="Masukkan judul buku" required>
+        </div>
+
+        <div class="form-group">
+          <label for="penulis">Penulis:</label>
+          <input type="text" id="penulis" name="penulis" placeholder="Masukkan nama penulis" required>
+        </div>
+
+        <div class="form-group">
+          <label for="penerbit">Penerbit</label>
+          <input type="text" id="penerbit" name="penerbit" placeholder="Masukkan nama penerbit" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tahun_terbit">Tahun Terbit</label>
+          <input type="number" id="tahun_terbit" name="tahun_terbit" placeholder="Masukkan tahun terbit" required>
+        </div>
+
+        <div class="form-group">
+          <label for="jumlah_halaman">Jumlah Halaman</label>
+          <input type="number" id="jumlah_halaman" name="jumlah_halaman" placeholder="Masukkan jumlah halaman" required>
+        </div>
+
+        <div class="form-group">
+          <label for="kategori">Kategori</label>
+          <select id="kategori" name="kategori" required>
+            <option disabled selected>Pilih Kategori</option>
+            <option value="Fiksi">Fiksi</option>
+            <option value="Non-Fiksi
