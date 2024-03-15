@@ -5,38 +5,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css"/>
     <!-- Judul Website -->
     <title>Perpustakaan Bintang</title>
+    <script>
+
+    </script>
   </head>
 
   <body class="light-mode">
 
-    <!-- Banner Judul -->
+    <!-- NAMA PERPUSTAKAAN -->
     <header>
       <div class="menu-icon">&#9776;</div>
       <h1>Perpustakaan Bintang</h1>
     </header>
 
-    <!-- Pilih Menu -->
+    <!-- NAVBAR -->
     <nav>
       <ul>
+
+        <!-- BERANDA -->
         <li><a href="beranda.html" class="active">Beranda</a></li>
 
-        <!-- menu rak buku -->
-        <li>
-          <a href="">Rak Buku</a>
+        <!-- RAK BUKU -->
+        <li><a href="">Rak Buku</a>
           <ul class="dropdown">
-            <li><a href="rak buku.html#buku">Buku</a></li>
-            <li><a href="rak buku.html#e_buku">E Buku</a></li>
-            <li><a href="rak buku.html#koleksi">Koleksi</a></li>
-            <li><a href="rak buku.html#favorit">Favorit</a></li>
+            <li><a href="rak_buku.html#buku">Buku</a></li>
+            <li><a href="rak_buku.html#e_buku">E Buku</a></li>
+            <li><a href="rak_buku.html#koleksi">Koleksi</a></li>
+            <li><a href="rak_buku.html#favorit">Favorit</a></li>
           </ul>
         </li>
 
-        <!-- menu kategori -->
-        <li>
-          <a href="#">Kategori</a>
+        <!-- KATEGORI -->
+        <li><a href="">Kategori</a>
           <ul class="dropdown">
             <li><a href="fiksi.html">Fiksi</a></li>
             <li><a href="non fiksi.html">Non Fiksi</a></li>
@@ -44,24 +47,19 @@
           </ul>
         </li>
 
-        <!-- menu pinjam -->
-        <li>
-          <a href="#">Pinjam</a>
+        <!-- PINJAM -->
+        <li><a href="">Pinjam</a>
           <ul class="dropdown">
             <li><a href="pinjam.html">Pinjam</a></li>
             <li><a href="riwayat.html">Riwayat</a></li>
           </ul>
         </li>
 
-        <!-- menu kegiatan dan donasi pada navbar -->
-        <li><a href="#">Kegiatan</a></li>
-        <li><a href="donasi.html">Donasi</a></li>
-
-        <!-- menu pengaturan -->
-        <li>
-          <a href="#">Pengaturan</a>
+        <!-- PENGATURAN -->
+        <li><a href="">Pengaturan</a>
           <ul class="dropdown">
-            <li><a href="profile.html"></a>Profile</li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="riwayatpeminjaman.html">Riwayat Peminjaman</a></li>
           </ul>
         </li>
 
@@ -71,8 +69,10 @@
 
     <div class="container_kami">
       <div class="library_kami">
-        <h2>Selamat Datang di Perpustakaan Bintang</h2>
-        <p>Menyediakan berbagai koleksi buku terbaru dan terbaik</p>
+        <div class="welcome-message">
+          <h2>Selamat Datang di Perpustakaan Bintang</h2>
+          <p>Menyediakan berbagai koleksi buku terbaru dan terbaik</p>
+        </div>
       </div>
       <div class="pos">
 
@@ -133,13 +133,32 @@
 
       </div>
       <div class="button_next">
-        <a href="rak buku.html"><button class="btn">Lebih Banyak ></button></a>
+        <a href="rak_buku.html"><button class="btn">Lebih Banyak ></button></a>
       </div>
     </div>
     <footer>
       &copy; Bintang 2023 Perpustakaan Bintang. Hak Cipta Dilindungi.
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // Ambil elemen pesan selamat datang
+      const welcomeMessage = document.querySelector('.welcome-message');
+
+      // Fungsi untuk mengatur animasi pesan selamat datang
+      function animateWelcomeMessage() {
+          welcomeMessage.animate([
+              { transform: 'translateX(-50px)', opacity: 0 },
+              { transform: 'translateX(0)', opacity: 1 },
+              { transform: 'translateX(50px)', opacity: 0 }
+          ], {
+              duration: 4000, // durasi animasi dalam milidetik (4 detik)
+              iterations: Infinity, // animasi berulang secara tak terbatas
+              easing: 'linear' // jenis easing
+          });
+      }
+
+      // Panggil fungsi untuk memulai animasi pesan selamat datang
+      animateWelcomeMessage();
+    </script>
   </body>
 </html>

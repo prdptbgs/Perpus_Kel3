@@ -1,3 +1,7 @@
+/*  untuk style beranda.html, buku.html, profile.html, rak_buku.html */
+
+
+/* style body html */
 body{
     margin: 0;
     padding: 0;
@@ -5,47 +9,104 @@ body{
     background: #f0f0f0;
     overflow-x: hidden; /* Menyembunyikan overflow horizontal */
 }
+
+/* style header di file html */
 header{
     background: linear-gradient(to right, #00a6a6, #7b00b8);
     color: white;
-    text-align: center;
     padding: 10px 0;
 }
+
+/* style h1 di file html  */
 h1{
     text-align: center;
 }
 
+
+
+
+
+/* mengatur persegi panjang dari navbar seperti nav ul di bawah */
 nav{
-    background: linear-gradient(to right, #00a6a6, #7b00b8);
+    background: linear-gradient(to right, #00a6a6, #7b00b8); /* mengatur warna pada persegi panjang pada navbar*/
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
 }
+
+/* mengatur persegi panjang dari navbar, diatas dari nav ul li dibawah */
 nav ul{
-    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(to right, #7b00b88f, #00a6a688);
+    margin: 0; /* margin diatur disini karena bawaan dari ul mempunyai margin */
+    display: flex; /* membuat urutan menjadi horizontal */
+    justify-content: center; /* membuat urutan yang sudah horizontal menjadi center */ 
+    background: linear-gradient(to right, #7b00b88f, #00a6a688); /* mengatur warna pada persegi panjang pada navbar bersama dengan warna yang sudah diberikan pada nav */
 }
-nav ul li{
-    margin: 10px;
+
+/* mengatur tempat kotak navbar berada yang berisi beranda, rak buku, kategori, dll*/
+nav ul li{ 
+    margin: 10px; /* mengatur jarak diluar kotak navbar 10pixel */ 
 }
+
+/* mengatur tulisan beranda, rak buku, kategori, dll */
 nav ul li a{
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    transition: 0.5s ease;
-}
-nav ul li a:hover,
-nav ul li a.active{
-    background-color: #000000;
+    padding: 10px 20px;/* padding atas-bawah: 10px, padding kanan-kiri: 20px */
 }
 
-.container{
+/* mengatur ketika kursor diarahkan ke beranda, rak buku, kategori, dll maka warna background tulisan tersebur akan menjadi hitam */
+nav ul li a:hover{
+    background-color: #000000;
+    transition: 0.5s ease; /* mengatur ketika kursor diarahkan akan ada efek transisi delay 0,5 detik */ 
+}
+
+
+
+
+ /* mengatur elemen li dalam ul dimanapun elemen itu berada */
+ul li{
+    list-style-type: none;
+    /*display: inline-block;*/
+    position: relative;
+}
+
+/* mengatur tulisan navbar(beranda,rak buku, kategori, pinjam, pengaturan) dan tulisan menu dropdown untuk setiap navbar */
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    text-align: center;
+}
+
+/* mengatur tampilan dropdown dari setiap navbar */
+ul li ul.dropdown{
+    width: 100%;
+    background: #22438C;
+    /*z-index: 999;*/
+    display: none;
+}
+
+/* mengatur elemen ul li ketika kursor diarahkan akan memunculkan menu dropdown */
+ul li:hover ul.dropdown{
+    display: block;/* menampilkan menu dropdown horizontal dan lebar dari setiap menu mengikuti lebar dari induknya yaitu navbar */
+    position: absolute;/* untuk mengatur tampilan dari menu dropdown agar tampilan menumpuk antara 1 dan yang lainnya */
+}
+
+/* mengatur tulisan dari menu dropdown seperti profile dari navbar pengaturan */
+ul li ul.dropdown li{
+    display: flex;
+    justify-content: center;
+}
+
+ 
+
+
+
+
+
+.container{ /* untuk rak_buku.html */
     max-width: 960px;
     height: 640px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 100px;
     background-color: white;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 
@@ -57,7 +118,7 @@ nav ul li a.active{
 .container_kami{
     max-width: 960px;
     height: 640px;
-    margin: 20px auto;
+    margin: 150px auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgb(0, 0, 0);
@@ -74,10 +135,9 @@ nav ul li a.active{
     color: #666;
 }
 
-.library_kami{
-    text-align: center;
-}
+
 .library_kami h2{
+    text-align: center;
     color: #333;
 }
 .library_kami p{
@@ -169,7 +229,7 @@ nav ul li a.active{
     color: #777;
 }
 .button{
-    display: flex;
+   display: flex;
     justify-content: space-between;
     text-align: center;
     margin-top: 10px;
@@ -200,37 +260,6 @@ footer{
     color: white;
     text-align: center;
     padding: 10px 0;
-}
-ul li ul.dropdown li{
-    display: flex;
-}
-ul li ul.dropdown{
-    width: 100%;
-    background: #22438C;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-ul li a:hover{
-    background: #112C66;
-}
-ul li:hover ul.dropdown{
-    display: block;
-}
-ul{
-    list-style: none;
-}
-ul li{
-    display: inline-block;
-    position: relative;
-}
-ul li a{
-    display: block;
-    padding: 20px 25px;
-    text-align: center;
-}
-ul li:hover ul.dropdown{
-    display: block;
 }
 
 .profile-info{
@@ -330,6 +359,50 @@ ul li:hover ul.dropdown{
         margin-right: 10px 0; /* Memberikan jarak antar card */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tambahan untuk tampilan perangkat seluler */
 @media only screen and (max-width: 1114px) {

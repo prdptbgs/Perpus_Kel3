@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
   <title>Perpustakaan Bintang - Profile Member</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 
   <nav>
     <ul>
-      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#" onclick="editProfile()">Edit Profile</a></li>
       <li><a href="#">Riwayat Peminjaman</a></li>
       <li><a href="#">Pinjaman Aktif</a></li>
       <li><a href="#">Pembayaran Denda</a></li>
@@ -23,7 +23,18 @@
   <section class="profile-info">
     <h2 style="text-align: center;">Informasi Member</h2>
     <img src="assets/img/janice.jpeg" alt="Foto Profil" class="profile-image" />
-         <ul class="profile-lengkap">
+    <form id="editForm" style="display:none;">
+      <ul class="profile-lengkap">
+        <li>Nama Lengkap: <input type="text" id="editNama" value="Pradipta Bagaskara Atmajaya"></li><br>
+        <li>Nomor Anggota: <input type="text" id="editNomorAnggota" value="22051214089"></li><br>
+        <li>Tanggal Bergabung: <input type="text" id="editTanggalBergabung" value="8 Maret 2024"></li><br>
+        <li>Email: <input type="text" id="editEmail" value="pradipta.22089.unesa.ac.id"></li><br>
+        <li>Status Keanggotaan: <input type="text" id="editStatus" value="Aktif"></li><br>
+        <li>Jumlah Buku yang Dipinjam: <input type="text" id="editJumlahBuku" value="12"></li><br>
+      </ul>
+      <button onclick="saveProfile()">Simpan Perubahan</button>
+    </form>
+    <ul class="profile-lengkap" id="profile-details">
       <li>Nama Lengkap: <strong>Pradipta Bagaskara Atmajaya</strong></li><br>
       <li>Nomor Anggota: <strong>22051214089</strong></li><br>
       <li>Tanggal Bergabung: <strong>8 Maret 2024</strong></li><br>
@@ -35,5 +46,7 @@
   <footer>
     &copy; Bintang 2023 Perpustakaan Bintang. Hak Cipta Dilindungi.
   </footer>
+
+  <script src="edit_profile.js"></script>
 </body>
 </html>
